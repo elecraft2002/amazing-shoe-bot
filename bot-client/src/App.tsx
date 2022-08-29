@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import io from 'socket.io-client';
 import Loading from './components/loading/Loading';
+import Nav from './components/nav/Nav';
+import Home from './Pages/Home/Home';
+import ShoesPage from './Pages/shoes/ShoesPage';
 
 const socket = io('http://localhost:4000');
 
 function App() {
   const [isLoading, setLoadingState] = useState<boolean>(!socket.connected)
   const [isConnected, setIsConnected] = useState<boolean>(socket.connected);
-  const [lastPong, setLastPong] = useState<null | number>(null);
   console.log(socket)
   useEffect(() => {
     socket.on('connect', () => {
@@ -27,17 +30,18 @@ function App() {
     };
   }, []);
 
-  const sendPing = () => {
-    socket.emit('ping');
-  }
   console.log(isLoading)
   return (
-    <div>
+    <>
+      <Nav isConnected={isConnected} id={socket.id} />
       <p>Connected: {'' + isConnected}</p>
-      <p>Last pong: {lastPong || '-'}</p>
-      <button onClick={sendPing}>Send ping</button>
       {isLoading ? <Loading></Loading> : null}
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Shoes" element={<ShoesPage socket={socket} setLoadingState={setLoadingState} />} />
+      </Routes>
+    </>
+
   );
 }
 

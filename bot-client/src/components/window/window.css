@@ -1,0 +1,21 @@
+.window__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.274);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .window__center {
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    font-weight: 600;
+    min-width: 30vw;
+  }
+  

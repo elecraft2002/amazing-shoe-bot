@@ -22,9 +22,5 @@ const getUpcoming = async () => {
     const { data } = await axios.get(url, config);
     return data;
 };
-async function xds() {
-    const xd = await getUpcoming();
-    console.log(xd.objects[0].publishedContent.nodes[0].properties.actions[0]);
-}
-xds();
+module.exports = getUpcoming;
 export {};

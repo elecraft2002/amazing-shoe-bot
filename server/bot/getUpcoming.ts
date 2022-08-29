@@ -26,9 +26,5 @@ const getUpcoming = async (): Promise<Upcoming> => {
     return data
 
 }
-async function xds() {
-    const xd = await getUpcoming()
-    console.log(xd.objects[0].publishedContent.nodes[0].properties.actions[0])
 
-}
-xds()
+module.exports = getUpcoming
