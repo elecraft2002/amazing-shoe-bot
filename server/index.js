@@ -4,6 +4,8 @@ const PORT = 4000;
 //New imports
 const http = require('http').Server(app);
 const cors = require('cors');
+//import { getUpcoming } from "./bot/getUpcoming"
+const getUpcoming = require("./bot/getUpcoming.ts");
 app.use(cors());
 const socketIO = require('socket.io')(http, {
     cors: {
@@ -16,9 +18,15 @@ socketIO.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('🔥: A user disconnected');
     });
-    socket.on("ping", (socket) => {
-        console.log(socket);
-        socket;
+    //Listeners
+    socket.on("getUpcoming", () => {
+        const data = async () => {
+            const response = await getUpcoming();
+            console.log("🦅 Sending to: " + socket.id);
+            socket.emit("getUpcomingResponse", response);
+        };
+        console.log(socket.id);
+        data();
     });
 });
 app.get('/api', (req, res) => {
