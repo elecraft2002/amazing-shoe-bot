@@ -5,6 +5,7 @@
     "concurrently": "^7.3.0",
     "cors": "2.8.5",
     "express": "^4.18.1",
+    "nconf": "^0.12.0",
     "nodemon": "^2.0.19",
     "react-table": "^7.8.0",
     "socket.io": "4.4.0",
