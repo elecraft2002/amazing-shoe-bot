@@ -5,8 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary: black;
-  --secondary: rgb(0, 119, 255);
+  --primary: rgb(0, 0, 10);
+  --secondary: rgb(0, 15, 27);
+  --highlite: rgb(0, 119, 255);
+  --white: white;
+  background: var(--primary);
+  color: var(--white)
 }
 
 code {

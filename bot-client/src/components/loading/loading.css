@@ -10,7 +10,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--secondary);
+  background: var(--white);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {
@@ -67,10 +67,10 @@
 }
 .loading__center {
   text-align: center;
-  color: var(--secondary);
+  color: var(--white);
   text-transform: uppercase;
-  background-color: white;
-  border: 2px solid var(--secondary);
+  background-color: var(--secondary);
+  border-radius: 1rem;
   font-weight: 600;
   min-width: 30vw;
 }
