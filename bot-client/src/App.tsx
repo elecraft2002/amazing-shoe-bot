@@ -3,7 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import io from 'socket.io-client';
 import Loading from './components/loading/Loading';
 import Nav from './components/nav/Nav';
+import Accounts from './Pages/Accounts/Accounts';
 import Home from './Pages/Home/Home';
+import Profiles from './Pages/Profiles/Profiles';
 import ShoesPage from './Pages/shoes/ShoesPage';
 
 const socket = io('http://localhost:4000');
@@ -39,6 +41,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Shoes" element={<ShoesPage socket={socket} setLoadingState={setLoadingState} />} />
+        <Route path="/Profiles" element={<Profiles socket={socket} setLoadingState={setLoadingState} />} />
+        <Route path="/Accounts" element={<Accounts socket={socket} setLoadingState={setLoadingState} />} />
       </Routes>
     </>
 

@@ -24,7 +24,13 @@ export default function Nav(props: { isConnected: boolean, id: string }) {
                 <ul className={`nav__list ${!isNavOpened ? "" : "change"}`}>
                     <li className='nav__item'><Link to={"/"} className='nav__logo--mobile nav__logo'><Logo /></Link></li>
                     < li className='nav__item' >
-                        <Link to="/shoes" >Shoes</Link>
+                        <Link to="/Shoes" >Shoes</Link>
+                    </li>
+                    < li className='nav__item' >
+                        <Link to="/Profiles" >Profiles</Link>
+                    </li>
+                    < li className='nav__item' >
+                        <Link to="/Accounts" >Accounts</Link>
                     </li>
                 </ul>
             </div>

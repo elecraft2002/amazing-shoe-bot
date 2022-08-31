@@ -1,3 +1,4 @@
+"use strict";
 // To parse this data:
 //
 //   import { Convert, Upcoming } from "./file";
@@ -6,30 +7,32 @@
 //
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
-export var Marketplace;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Convert = exports.JSONBodyType = exports.FluffyType = exports.PurpleType = exports.SubTypeEnum = exports.StyleResourceType = exports.ThreadTypeEnum = exports.CopyID = exports.ColorTheme = exports.SkusResourceType = exports.ColorType = exports.VasType = exports.Value = exports.ConsumerChannelResourceType = exports.CommerceCountryExclusion = exports.Channel = exports.Type = exports.StyleType = exports.StyleColor = exports.Method = exports.LocationIDType = exports.MerchGroup = exports.Level = exports.Marketplace = void 0;
+var Marketplace;
 (function (Marketplace) {
     Marketplace["Cz"] = "CZ";
-})(Marketplace || (Marketplace = {}));
-export var Level;
+})(Marketplace = exports.Marketplace || (exports.Marketplace = {}));
+var Level;
 (function (Level) {
     Level["High"] = "HIGH";
     Level["Low"] = "LOW";
     Level["Medium"] = "MEDIUM";
     Level["Oos"] = "OOS";
-})(Level || (Level = {}));
-export var MerchGroup;
+})(Level = exports.Level || (exports.Level = {}));
+var MerchGroup;
 (function (MerchGroup) {
     MerchGroup["Eu"] = "EU";
-})(MerchGroup || (MerchGroup = {}));
-export var LocationIDType;
+})(MerchGroup = exports.MerchGroup || (exports.MerchGroup = {}));
+var LocationIDType;
 (function (LocationIDType) {
     LocationIDType["MerchGroup"] = "merchGroup";
-})(LocationIDType || (LocationIDType = {}));
-export var Method;
+})(LocationIDType = exports.LocationIDType || (exports.LocationIDType = {}));
+var Method;
 (function (Method) {
     Method["Ship"] = "SHIP";
-})(Method || (Method = {}));
-export var StyleColor;
+})(Method = exports.Method || (exports.Method = {}));
+var StyleColor;
 (function (StyleColor) {
     StyleColor["Da6672700"] = "DA6672-700";
     StyleColor["Dm8019200"] = "DM8019-200";
@@ -37,91 +40,91 @@ export var StyleColor;
     StyleColor["Do8727100"] = "DO8727-100";
     StyleColor["Do9334100"] = "DO9334-100";
     StyleColor["Dq0299100"] = "DQ0299-100";
-})(StyleColor || (StyleColor = {}));
-export var StyleType;
+})(StyleColor = exports.StyleColor || (exports.StyleColor = {}));
+var StyleType;
 (function (StyleType) {
     StyleType["Inline"] = "INLINE";
-})(StyleType || (StyleType = {}));
-export var Type;
+})(StyleType = exports.StyleType || (exports.StyleType = {}));
+var Type;
 (function (Type) {
     Type["MerchProduct"] = "merchProduct";
-})(Type || (Type = {}));
-export var Channel;
+})(Type = exports.Type || (exports.Type = {}));
+var Channel;
 (function (Channel) {
     Channel["NikeStoreExperiences"] = "Nike Store Experiences";
     Channel["Snkrs"] = "SNKRS";
-})(Channel || (Channel = {}));
-export var CommerceCountryExclusion;
+})(Channel = exports.Channel || (exports.Channel = {}));
+var CommerceCountryExclusion;
 (function (CommerceCountryExclusion) {
     CommerceCountryExclusion["Ru"] = "RU";
     CommerceCountryExclusion["Tr"] = "TR";
-})(CommerceCountryExclusion || (CommerceCountryExclusion = {}));
-export var ConsumerChannelResourceType;
+})(CommerceCountryExclusion = exports.CommerceCountryExclusion || (exports.CommerceCountryExclusion = {}));
+var ConsumerChannelResourceType;
 (function (ConsumerChannelResourceType) {
     ConsumerChannelResourceType["GlobalizationConsumerChannels"] = "globalization/consumer_channels";
-})(ConsumerChannelResourceType || (ConsumerChannelResourceType = {}));
-export var Value;
+})(ConsumerChannelResourceType = exports.ConsumerChannelResourceType || (exports.ConsumerChannelResourceType = {}));
+var Value;
 (function (Value) {
     Value["NikeAppSelfCheckout"] = "Nike App Self-Checkout";
     Value["ScanToLearn"] = "Scan to Learn";
     Value["ScanToTry"] = "Scan to Try";
-})(Value || (Value = {}));
-export var VasType;
+})(Value = exports.Value || (exports.Value = {}));
+var VasType;
 (function (VasType) {
     VasType["GiftMessage"] = "GIFT_MESSAGE";
     VasType["GiftWrap"] = "GIFT_WRAP";
-})(VasType || (VasType = {}));
-export var ColorType;
+})(VasType = exports.VasType || (exports.VasType = {}));
+var ColorType;
 (function (ColorType) {
     ColorType["Logo"] = "LOGO";
     ColorType["Primary"] = "PRIMARY";
     ColorType["Secondary"] = "SECONDARY";
     ColorType["Simple"] = "SIMPLE";
     ColorType["Tertiary"] = "TERTIARY";
-})(ColorType || (ColorType = {}));
-export var SkusResourceType;
+})(ColorType = exports.ColorType || (exports.ColorType = {}));
+var SkusResourceType;
 (function (SkusResourceType) {
     SkusResourceType["MerchSku"] = "merchSku";
-})(SkusResourceType || (SkusResourceType = {}));
-export var ColorTheme;
+})(SkusResourceType = exports.SkusResourceType || (exports.SkusResourceType = {}));
+var ColorTheme;
 (function (ColorTheme) {
     ColorTheme["Dark"] = "dark";
     ColorTheme["Light"] = "light";
-})(ColorTheme || (ColorTheme = {}));
-export var CopyID;
+})(ColorTheme = exports.ColorTheme || (exports.ColorTheme = {}));
+var CopyID;
 (function (CopyID) {
     CopyID["Bf21A9E8Fbc5A3846Fb05B4Fa0859E0917B2202F"] = "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f";
-})(CopyID || (CopyID = {}));
-export var ThreadTypeEnum;
+})(CopyID = exports.CopyID || (exports.CopyID = {}));
+var ThreadTypeEnum;
 (function (ThreadTypeEnum) {
     ThreadTypeEnum["Editorial"] = "editorial";
     ThreadTypeEnum["Product"] = "product";
-})(ThreadTypeEnum || (ThreadTypeEnum = {}));
-export var StyleResourceType;
+})(ThreadTypeEnum = exports.ThreadTypeEnum || (exports.ThreadTypeEnum = {}));
+var StyleResourceType;
 (function (StyleResourceType) {
     StyleResourceType["ContentStyle"] = "content/style";
-})(StyleResourceType || (StyleResourceType = {}));
-export var SubTypeEnum;
+})(StyleResourceType = exports.StyleResourceType || (exports.StyleResourceType = {}));
+var SubTypeEnum;
 (function (SubTypeEnum) {
     SubTypeEnum["Carousel"] = "carousel";
     SubTypeEnum["Image"] = "image";
     SubTypeEnum["Text"] = "text";
-})(SubTypeEnum || (SubTypeEnum = {}));
-export var PurpleType;
+})(SubTypeEnum = exports.SubTypeEnum || (exports.SubTypeEnum = {}));
+var PurpleType;
 (function (PurpleType) {
     PurpleType["Card"] = "card";
-})(PurpleType || (PurpleType = {}));
-export var FluffyType;
+})(PurpleType = exports.PurpleType || (exports.PurpleType = {}));
+var FluffyType;
 (function (FluffyType) {
     FluffyType["Paragraph"] = "paragraph";
-})(FluffyType || (FluffyType = {}));
-export var JSONBodyType;
+})(FluffyType = exports.FluffyType || (exports.FluffyType = {}));
+var JSONBodyType;
 (function (JSONBodyType) {
     JSONBodyType["Doc"] = "doc";
-})(JSONBodyType || (JSONBodyType = {}));
+})(JSONBodyType = exports.JSONBodyType || (exports.JSONBodyType = {}));
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
-export class Convert {
+class Convert {
     static toUpcoming(json) {
         return cast(JSON.parse(json), r("Upcoming"));
     }
@@ -129,6 +132,7 @@ export class Convert {
         return JSON.stringify(uncast(value, r("Upcoming")), null, 2);
     }
 }
+exports.Convert = Convert;
 function invalidValue(typ, val, key = '') {
     if (key) {
         throw Error(`Invalid value for key "${key}". Expected type ${JSON.stringify(typ)} but got ${JSON.stringify(val)}`);

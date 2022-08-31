@@ -5,6 +5,7 @@ import io from 'socket.io-client';
 import { Convert, Upcoming, Object } from "./upcoming"
 import Shoe from '../../components/shoe/Shoe';
 
+
 export default function ShoesPage(props: { socket: Socket, setLoadingState: React.Dispatch<React.SetStateAction<boolean>> }) {
 
     const [upcomingShoes, loadUpcomingShoes] = useState<Upcoming | undefined>(undefined)
@@ -18,9 +19,9 @@ export default function ShoesPage(props: { socket: Socket, setLoadingState: Reac
         loadUpcomingShoes(response)
         props.setLoadingState(false)
     })
-    useEffect(()=>{
+    useEffect(() => {
         handleShoeLoad()
-    },[])
+    }, [])
     return (
         <>
             <div>ShoesPage</div>

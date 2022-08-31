@@ -3,7 +3,10 @@ const axios = require("axios")
 //import int from "./import"
 import { Convert, Upcoming } from "./Upcoming"
 
-const getUpcoming = async (): Promise<Upcoming> => {
+const upcoming = require("./Upcoming") 
+
+
+export const getUpcoming = async (): Promise<Upcoming> => {
     const url = 'https://api.nike.com/product_feed/threads/v3/?anchor=0&count=50&filter=marketplace%28CZ%29&filter=language%28cs%29&filter=upcoming%28true%29&filter=channelId%28010794e5-35fe-4e32-aaff-cd2c74f89d61%29&filter=exclusiveAccess%28true%2Cfalse%29&sort=effectiveStartSellDateAsc'
     const config = {
         method: 'get',
@@ -24,7 +27,5 @@ const getUpcoming = async (): Promise<Upcoming> => {
     };
     const { data } = await axios.get(url, config)
     return data
-
 }
 
-module.exports = getUpcoming

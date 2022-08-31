@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "target": "ESNext",
+    "target": "es6",
+    "module": "commonjs",
     "watch": true
   }
 }
